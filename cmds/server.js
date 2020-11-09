@@ -1,7 +1,6 @@
 const Discord = module.require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let createguildt = new Date(message.guild.createdTimestamp)
-  createguildt.setMilliseconds(8 * 60 * 60 * 1000)
   let createguild = createguildt.toLocaleString('ru', {
     weekday: 'long',
     month: 'long',
@@ -12,7 +11,6 @@ module.exports.run = async (bot, message, args) => {
     minute: 'numeric'
   })
   let accjoint = new Date(message.member.joinedAt)
-  accjoint.setMilliseconds(8 * 60 * 60 * 1000)
   let accjoin = accjoint.toLocaleString('ru', {
     weekday: 'long',
     month: 'long',
