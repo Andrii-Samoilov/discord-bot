@@ -17,7 +17,7 @@ fs.readdir("./cmds/", (err, files) => {
     bot.commands.set(props.help.name, props);
   });
 });
-bot.on('ready', () =>{ // ивент, когда бот запускается https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-ready
+bot.on('ready', () =>{
   bot.generateInvite("ADMINISTRATOR").then(invite => console.log(`Ссылка на добавление ${invite}`))
   bot.user.setPresence({
     status: 'online',
@@ -27,7 +27,7 @@ bot.on('ready', () =>{ // ивент, когда бот запускается h
   })
 })
 
-bot.on('message', message =>{ // ивент, когда приходит любое сообщение в чат https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-message
+bot.on('message', message =>{ 
     if (message.author.bot) return;
     if (message.channel.type === 'dm') {
 return //Игнорировать сообщения в личку 
