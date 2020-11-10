@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
-const db = require("quick.db");
 const fs = require("fs");
 let config = require("./botconfig.json");
 let token = config.token;
